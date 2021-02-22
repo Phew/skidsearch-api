@@ -12,7 +12,7 @@ def main():
             r = requests.post(
                 url='https://skidsearch.net/panel/index.php', 
                 data={"query": s, "method": "username"}, 
-                cookies={"PHPSESSID": "PHPSESSID", "__cfduid": "__cfduid", "cf_clearance": "cf_clearance-1613954216-0-250"},
+                cookies={"PHPSESSID": "PHPSESSID", "__cfduid": "__cfduid", "cf_clearance": "cf_clearance"},
                 headers={"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36"}
             )
             lol = re.findall(r'(\<p><br>Database:+(.*))', r.text)[0][1]
@@ -30,7 +30,7 @@ def main():
             r = requests.post(
                 url='https://skidsearch.net/panel/index.php', 
                 data={"query": s, "method": "uuid"}, 
-                cookies={"PHPSESSID": "PHPSESSID", "__cfduid": "__cfduid", "cf_clearance": "cf_clearance-1613954216-0-250"},
+                cookies={"PHPSESSID": "PHPSESSID", "__cfduid": "__cfduid", "cf_clearance": "cf_clearance"},
                 headers={"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36"}
             )
             lol = re.findall(r'(\<p><br>Database:+(.*))', r.text)[0][1]
